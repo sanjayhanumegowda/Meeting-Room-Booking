@@ -1,0 +1,32 @@
+<div class="roomStatusContainer">
+  <h2 class="header">Room Status</h2>
+  <div class="container">
+    <div class="inputField">
+      <label class="label">Filter By Meeting Room</label>
+      <select class="field" [(ngModel)]="selectedRoom" (change)="onChangeEvent($event)">
+          <option *ngFor="let room of rooms" [value]="room.id">{{room.name}}</option>
+        </select>
+  </div>
+  <table class="table" *ngIf="showTable">
+    <tr>
+      <th>Room Name</th>
+      <th>User Name</th>
+      <th>Date</th>
+      <th>From</th>
+      <th>To</th>
+      <th>Agenda</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let roomDetails of filterdContainer">
+      <td>{{roomDetails.name}}</td>
+      <td>{{roomDetails.roomDetails.userName}}</td>
+      <td>{{roomDetails.roomDetails.date}}</td>
+      <td>{{roomDetails.roomDetails.timeFrom}}</td>
+      <td>{{roomDetails.roomDetails.timeTo}}</td>
+      <td>{{roomDetails.roomDetails.reason}}</td>
+      <td><button class="btn" (click)="deleteBooking(roomDetails)">Delete</button></td>
+    </tr>
+  </table>
+  
+  </div>
+</div>

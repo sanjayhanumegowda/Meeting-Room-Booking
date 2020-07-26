@@ -1,0 +1,40 @@
+<div class="roomStatusContainer">
+  <h2 class="header">Room Status</h2>
+  <div class="container">
+    <h3 class="filterHeader">Filter By Time</h3>
+    <div class="dateContainer">
+      <div class="inputField">
+        <label class="label">Time From</label>
+        <input type="time" class="field" [(ngModel)]="timeFrom" />
+    </div>
+    <div class="inputField">
+      <label class="label">Time To</label>
+      <input type="time" class="field" [(ngModel)]="timeTo" />
+  </div>
+  <button class="search" (click)="search()">Search</button>
+    </div>
+  <table class="table" *ngIf="showTable">
+    <tr>
+      <th>Room Name</th>
+      <th>User Name</th>
+      <th>Date</th>
+      <th>From</th>
+      <th>To</th>
+      <th>Agenda</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let roomDetails of filterdContainer">
+      <td>{{roomDetails.name}}</td>
+      <td>{{roomDetails.roomDetails.userName}}</td>
+      <td>{{roomDetails.roomDetails.date}}</td>
+      <td>{{roomDetails.roomDetails.timeFrom}}</td>
+      <td>{{roomDetails.roomDetails.timeTo}}</td>
+      <td>{{roomDetails.roomDetails.reason}}</td>
+      <td>{{roomDetails.status}}</td>
+      <td><button class="btn" (click)="deleteBooking(roomDetails)">Delete</button></td>
+    </tr>
+  </table>
+  
+  </div>
+</div>

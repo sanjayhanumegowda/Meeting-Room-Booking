@@ -1,0 +1,68 @@
+.roomStatusContainer{
+    display:flex;
+    flex-direction: column;
+}
+ .roomStatusContainer>.header{
+     text-align:center;
+ }
+
+ .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 5%;
+    margin: 0% 5% 1%;
+ }
+
+ .dateContainer{
+    display: flex;
+    flex-direction: row;  
+ }
+
+ .inputField{
+    width: 30%;
+    margin: 1%;
+}
+ .label{
+   font-weight: 500;
+   font-size: 18px;
+   margin-left: 1%;
+ }
+
+ .field{
+   width: 100%;
+   padding: 1%;
+   margin: 1%;
+ }
+ .table{
+    margin: 1%;
+ }
+
+ .btn{
+    padding: 6%;
+    background-color: #089dec;
+    border-radius: 7px;
+    color: #fff;
+    border: none;
+  }
+
+  .btn:active{
+    transform: translateY(1px);
+}
+.filterHeader{
+    text-align: center;
+}
+.search{
+    padding: 1%;
+    margin: 3%;
+    width: 8%;
+    background-color: #089dec;
+    border-radius: 7px;
+    color: #fff;
+    border: none;
+}
+.search:active{
+    transform: translateY(1px);
+}

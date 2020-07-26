@@ -1,0 +1,70 @@
+.roomPageContainer{
+    display:flex;
+    flex-direction: column;
+}
+ .roomPageContainer>.header{
+     text-align:center;
+ }
+
+ .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+ }
+
+ .formContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 50%;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 5%;
+    margin: 0% 5% 1%;
+ }
+ .inputField{
+     width:40%;
+     margin: 2%;
+ }
+ .tinputField{
+    width:25%;
+    margin: 2%; 
+ }
+  .label{
+    font-weight: 500;
+    font-size: 18px;
+    margin-left: 1%;
+  }
+
+  .field{
+    width: 100%;
+    padding: 1%;
+    margin: 1%;
+  }
+
+  .btn{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .book{
+    padding: 2%;
+    width: 15%;
+    margin: 2%;
+    background-color: #089dec;
+    border-radius: 7px;
+    color: #fff;
+    border: none;
+  }
+
+  .book:active{
+    transform: translateY(1px);
+}
+.is-invalid{
+    border:1px solid red;
+}
+.invalid-feedback{
+    color:red;
+}
